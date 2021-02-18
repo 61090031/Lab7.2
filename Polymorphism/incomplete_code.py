@@ -20,8 +20,16 @@ class Walk( Transportation ):
 
    def find_cost( self ):
       return 0
-
-
+   
+#61090017
+class Taxi(Transportation):
+    def __init__(self, s_p, e_p, d):
+        super().__init__(s_p, e_p, d)
+        self._d = d
+        
+    def find_cost(self):
+        self._cost = self._d * 40
+        return self._cost
    
 # main program
 
