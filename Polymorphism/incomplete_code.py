@@ -30,6 +30,16 @@ class Taxi(Transportation):
     def find_cost(self):
         self._cost = self._d * 40
         return self._cost
+
+ #62011278
+class Train(Transportation):
+    def __init__(self, s_p, e_p,d,sta):
+        super().__init__(s_p, e_p, d)
+        self._sta = sta*5
+
+    def find_cost(self):
+        self._cost = self._sta
+        return self._cost
    
 # main program
 
